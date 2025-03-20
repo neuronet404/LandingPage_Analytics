@@ -3,10 +3,10 @@ import { Search, Plus, MoreHorizontal } from "lucide-react";
 
 const FlashCards = () => {
   return (
-    <div className="w-full min-h-[500px] h-full font-rubik">
+    <div className="w-full  h-full font-rubik">
       {/* Header */}
-      <div className="flex items-center justify-between mb-4">
-        <h1 className="text-2xl font-semibold text-green-700">
+      <div className="flex items-center justify-between mb-2">
+        <h1 className="text-2xl font-semibold text-emerald-700">
           My Flash Cards
         </h1>
         <div className="flex items-center gap-2">
@@ -20,7 +20,7 @@ const FlashCards = () => {
       </div>
 
       {/* Cards Container */}
-      <div className="space-y-4 w-full h-[500px] bg-[#ecf1f0] dark:bg-[#444444] rounded-xl flex items-center justify-center flex-col relative">
+      <div className="space-y-4 w-full h-[400px] sm:h-[450px] bg-[#ecf1f0] dark:bg-[#444444] rounded-xl flex items-center justify-center flex-col relative">
         <div className="absolute inset-0 bg-gray-900/50 backdrop-blur-sm z-10 rounded-lg flex items-center justify-center">
           <div className="text-center">
             <h3 className="text-3xl md:text-4xl font-bold text-white tracking-wider">

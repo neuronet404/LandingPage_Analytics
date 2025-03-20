@@ -44,7 +44,6 @@ export default function FileGridSystem({ fileType }: FileGridSystemProps) {
   const { fileSystem, setFileSystem, loading, uploadFileSystem } =
     useFileSystem(userId);
 
-
   const handleClickOutside = (event: MouseEvent) => {
     if (
       dropdownOpen &&
@@ -310,9 +309,9 @@ export default function FileGridSystem({ fileType }: FileGridSystemProps) {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full =">
       {/* Header with Subject and Buttons */}
-      <div className="flex justify-between items-center mb-6">
+      <div className="flex justify-between items-center mb-2">
         <h2 className="text-xl md:text-2xl font-semibold text-emerald-700">
           Subject
         </h2>
@@ -331,7 +330,7 @@ export default function FileGridSystem({ fileType }: FileGridSystemProps) {
                 />
                 {selectedFolder
                   ? folders.find((folder) => folder.id === selectedFolder)
-                    ?.name || "All Folders"
+                      ?.name || "All Folders"
                   : "All Folders"}
                 <ChevronDown className="h-4 w-4" />
               </div>
@@ -347,10 +346,11 @@ export default function FileGridSystem({ fileType }: FileGridSystemProps) {
                   {folders.map((folder) => (
                     <li
                       key={folder.id}
-                      className={`px-4 py-2 hover:bg-gray-100 dark:hover:bg-[#363636] cursor-pointer ${selectedFolder === folder.id
-                        ? "bg-gray-100 dark:bg-[#363636]"
-                        : ""
-                        }`}
+                      className={`px-4 py-2 hover:bg-gray-100 dark:hover:bg-[#363636] cursor-pointer ${
+                        selectedFolder === folder.id
+                          ? "bg-gray-100 dark:bg-[#363636]"
+                          : ""
+                      }`}
                       onClick={() => handleFolderSelect(folder.id)}
                     >
                       {folder.name}
@@ -364,7 +364,7 @@ export default function FileGridSystem({ fileType }: FileGridSystemProps) {
       </div>
 
       {/* Files Grid */}
-      <div className="rounded-xl  w-full h-[500px] gap-8 bg-[#ecf1f0] dark:bg-[#444444] overflow-y-auto">
+      <div className="rounded-xl  w-full h-[400px] sm:h-[450px] gap-8 bg-[#ecf1f0] dark:bg-[#444444] overflow-y-auto">
         {files.length > 0 && (
           <div className="p-4 grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-6 w-full">
             {files.map((file) => (
@@ -399,8 +399,7 @@ export default function FileGridSystem({ fileType }: FileGridSystemProps) {
                         <Image
                           src={file.name.endsWith(".pdf") ? PdfFile : PlainNote}
                           alt={file.name}
-                          className="w-[102px] h-[128px]
-                   sm:w-[120px] sm:h-[150px]"
+                          className="w-[64px] h-[80px] sm:w-[80px] sm:h-[100px]"
                         />
                       </div>
                     </div>
