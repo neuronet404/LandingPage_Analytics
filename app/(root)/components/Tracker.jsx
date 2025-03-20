@@ -46,16 +46,16 @@ const knowledgeData = [
 const data = [
   {
     label: "Cardiovascular Physiology",
-    mastery: 68,
+    mastery: 88,
     examFreq: 92,
     efficiency: "Medium efficiency",
-    color: "#EAB308", // Yellow
+    color: "#10B981", // Yellow
     warning: false,
     icon: "heart",
   },
   {
     label: "Renal Pathology",
-    mastery: 44,
+    mastery: 47,
     examFreq: 88,
     efficiency: "Low efficiency",
     color: "#EF4444", // Red
@@ -64,16 +64,16 @@ const data = [
   },
   {
     label: "Neuroanatomy",
-    mastery: 51,
+    mastery: 76,
     examFreq: 35,
     efficiency: "Medium efficiency",
-    color: "#8B5CF6", // Purple
+    color: "#EAB308", // Purple
     warning: false,
     icon: "brain",
   },
   {
     label: "Immunology",
-    mastery: 76,
+    mastery: 96,
     examFreq: 85,
     efficiency: "High efficiency",
     color: "#10B981", // Green
@@ -82,10 +82,10 @@ const data = [
   },
   {
     label: "Pharmacology - Antibiotics",
-    mastery: 39,
+    mastery: 29,
     examFreq: 56,
     efficiency: "Low efficiency",
-    color: "#3B82F6", // Blue
+    color: "#EF4444", // Blue
     warning: true,
     icon: "pill",
   },
